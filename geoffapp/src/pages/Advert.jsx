@@ -19,7 +19,7 @@ function Advert() {
             adContainer.innerHTML = '';
             const script = document.createElement('script');
             script.type = 'text/javascript';
-            script.src = `https://secure.adnxs.com/ttj?id=35405406&size=${adSize}`;
+            script.src = `https://secure.adnxs.com/ttj?id=35407013&size=${adSize}`;
             adContainer.appendChild(script);
         };
 
