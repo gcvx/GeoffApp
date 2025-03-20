@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/GeoffApp/static/css/main.11cfaa85.css",
-    "main.js": "/GeoffApp/static/js/main.c27220dd.js",
+    "main.js": "/GeoffApp/static/js/main.387feece.js",
     "index.html": "/GeoffApp/index.html",
     "main.11cfaa85.css.map": "/GeoffApp/static/css/main.11cfaa85.css.map",
-    "main.c27220dd.js.map": "/GeoffApp/static/js/main.c27220dd.js.map"
+    "main.387feece.js.map": "/GeoffApp/static/js/main.387feece.js.map"
   },
   "entrypoints": [
     "static/css/main.11cfaa85.css",
-    "static/js/main.c27220dd.js"
+    "static/js/main.387feece.js"
   ]
 }
