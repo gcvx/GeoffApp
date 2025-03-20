@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Advert from './pages/Advert';
 import './App.css';
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
                 setCurrentPage('about');
             } else if (hash === '#/contact') {
                 setCurrentPage('contact');
+            } else if (hash === '#/advert') {
+                setCurrentPage('advert');
             }
         }
 
@@ -31,6 +34,8 @@ function App() {
         pageContent = <About />;
     } else if (currentPage === 'contact') {
         pageContent = <Contact />;
+    } else if (currentPage === 'advert') {
+        pageContent = <Advert />;
     } else {
         pageContent = <Home />;
     }
