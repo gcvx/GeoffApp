@@ -58,6 +58,7 @@ function Advert() {
 
             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
                 <iframe
+                    title="Iframe slot 1"
                     src={`https://secure.adnxs.com/ttj?id=35405406&size=${iframeAdSize.split('x')[0]}x${iframeAdSize.split('x')[1]}`}
                     frameBorder="0"
                     scrolling="no"
@@ -71,6 +72,7 @@ function Advert() {
                     style={{ border: '1px solid lightgray' }}
                 ></iframe>
                 <iframe
+                    title="Iframe slot 2"
                     src={`https://secure.adnxs.com/ttj?id=35405406&size=${iframeAdSize.split('x')[0]}x${iframeAdSize.split('x')[1]}`}
                     frameBorder="0"
                     scrolling="no"
