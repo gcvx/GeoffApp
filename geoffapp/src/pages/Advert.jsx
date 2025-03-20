@@ -27,6 +27,14 @@ function Advert() {
         loadAd('ad2');
     }, [adSize]);
 
+    const createIframeContent = (size) => {
+        return {
+            __html: `
+                <script type="text/javascript" src="https://secure.adnxs.com/ttj?id=35405406&size=${size}"></script>
+            `,
+        };
+    };
+
     return (
         <div>
             <h1>Advert</h1>
@@ -57,34 +65,22 @@ function Advert() {
             </select>
 
             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                <iframe
-                    title="Iframe slot 1"
-                    src={`https://secure.adnxs.com/ttj?id=35405406&size=${iframeAdSize.split('x')[0]}x${iframeAdSize.split('x')[1]}`}
-                    frameBorder="0"
-                    scrolling="no"
-                    marginHeight="0"
-                    marginWidth="0"
-                    topMargin="0"
-                    leftMargin="0"
-                    allowTransparency="true"
-                    width={iframeAdSize.split('x')[0]}
-                    height={iframeAdSize.split('x')[1]}
-                    style={{ border: '1px solid lightgray' }}
-                ></iframe>
-                <iframe
-                    title="Iframe slot 2"
-                    src={`https://secure.adnxs.com/ttj?id=35405406&size=${iframeAdSize.split('x')[0]}x${iframeAdSize.split('x')[1]}`}
-                    frameBorder="0"
-                    scrolling="no"
-                    marginHeight="0"
-                    marginWidth="0"
-                    topMargin="0"
-                    leftMargin="0"
-                    allowTransparency="true"
-                    width={iframeAdSize.split('x')[0]}
-                    height={iframeAdSize.split('x')[1]}
-                    style={{ border: '1px solid lightgray' }}
-                ></iframe>
+                <div
+                    dangerouslySetInnerHTML={createIframeContent(iframeAdSize)}
+                    style={{
+                        border: '1px solid lightgray',
+                        width: iframeAdSize.split('x')[0] + 'px',
+                        height: iframeAdSize.split('x')[1] + 'px',
+                    }}
+                ></div>
+                <div
+                    dangerouslySetInnerHTML={createIframeContent(iframeAdSize)}
+                    style={{
+                        border: '1px solid lightgray',
+                        width: iframeAdSize.split('x')[0] + 'px',
+                        height: iframeAdSize.split('x')[1] + 'px',
+                    }}
+                ></div>
             </div>
         </div>
     );
