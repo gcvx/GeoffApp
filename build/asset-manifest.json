@@ -7,7 +7,7 @@
     "main.ca21b3aa.js.map": "/GeoffApp/static/js/main.ca21b3aa.js.map"
   },
   "entrypoints": [
-    "/GeoffApp/static/css/main.11cfaa85.css",
-    "/GeoffApp/static/js/main.ca21b3aa.js"
+    "static/css/main.11cfaa85.css",
+    "static/js/main.ca21b3aa.js"
   ]
 }
