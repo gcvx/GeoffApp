@@ -8,6 +8,7 @@ function Navigation() {
                 <li><a href="#/about">About</a></li>
                 <li><a href="#/contact">Contact</a></li>
                 <li><a href="#/advert">Advert</a></li>
+                <li><a href="#/map">Map</a></li>
             </ul>
         </nav>
     );
