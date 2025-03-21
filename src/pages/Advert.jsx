@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Advert() {
+function Advertising() {
     const [adSize, setAdSize] = useState('300x250');
 
     const handleSizeChange = (event) => {
@@ -37,7 +37,7 @@ function Advert() {
 
     return (
         <div>
-            <h1>Advert</h1>
+            <h1>Advertising</h1>
             <label htmlFor="ad-size">Select Ad Size: </label>
             <select id="ad-size" value={adSize} onChange={handleSizeChange}>
                 <option value="300x250">300x250</option>
@@ -82,8 +82,35 @@ function Advert() {
                     }}
                 ></div>
             </div>
+
+            <h2>AdSense</h2>
+            <div>
+                {/* First Placement */}
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1142382017286329" crossorigin="anonymous"></script>
+                <ins className="adsbygoogle"
+                     style={{ display: 'block' }}
+                     data-ad-client="ca-pub-1142382017286329"
+                     data-ad-slot="9584138136"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                {/* Second Placement */}
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1142382017286329" crossorigin="anonymous"></script>
+                <ins className="adsbygoogle"
+                     style={{ display: 'block' }}
+                     data-ad-client="ca-pub-1142382017286329"
+                     data-ad-slot="3282453664"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
     );
 }
 
-export default Advert;
+export default Advertising;

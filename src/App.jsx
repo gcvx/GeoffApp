@@ -4,7 +4,7 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Advert from './pages/Advert';
+import Advertising from './pages/Advert'; // Updated import to reflect the renamed component
 import './App.css';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/contact" element={<Contact />} />
-                        <Route path="/advert" element={<Advert />} />
+                        <Route path="/advert" element={<Advertising />} />
                     </Routes>
                 </main>
                 <footer>

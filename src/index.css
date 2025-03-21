@@ -20,3 +20,10 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+/* Added styles for AdSense ad units */
+.adsbygoogle {
+  border: 1px solid lightgray;
+  display: block;
+  margin: 10px auto;
+}
