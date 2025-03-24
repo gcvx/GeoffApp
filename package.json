@@ -1,6 +1,6 @@
 {
   "name": "geoffapp",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "private": true,
   "homepage": "https://gcvx.github.io/GeoffApp",
   "dependencies": {

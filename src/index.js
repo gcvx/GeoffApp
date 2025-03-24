@@ -2,9 +2,9 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
+import packageJson from '../package.json';
 
-// Add version number
-const version = '1.0.0'; // Increment this manually after each commit
+const version = packageJson.version;
 console.log(`App Version: ${version}`);
 
 const root = createRoot(document.getElementById('root'));
