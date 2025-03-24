@@ -16,10 +16,15 @@ function Advertising() {
     useEffect(() => {
         const loadAd = (id) => {
             const adContainer = document.getElementById(id);
+            if (!adContainer) {
+                console.error(`Ad container with id '${id}' not found.`);
+                return;
+            }
             adContainer.innerHTML = '';
             const script = document.createElement('script');
             script.type = 'text/javascript';
             script.src = `https://secure.adnxs.com/ttj?id=35407013&size=${adSize}`;
+            script.onerror = () => console.error(`Failed to load ad script for id '${id}'.`);
             adContainer.appendChild(script);
         };
 
@@ -36,12 +41,17 @@ function Advertising() {
     };
 
     useEffect(() => {
-        // Dynamically load AdSense scripts after rendering
         const loadAdSense = () => {
             const ads = document.querySelectorAll('.adsbygoogle');
+            if (!window.adsbygoogle) {
+                console.error('AdSense library not loaded.');
+                return;
+            }
             ads.forEach((ad) => {
-                if (window.adsbygoogle) {
+                try {
                     window.adsbygoogle.push({});
+                } catch (error) {
+                    console.error('Error initializing AdSense ad:', error);
                 }
             });
         };
