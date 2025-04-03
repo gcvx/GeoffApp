@@ -141,9 +141,9 @@ function Advertising() {
 
             <h2>AdSense</h2>
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This section displays AdSense ad slots.</p>
+                <p> TTT Lorem ipsum dolor sit amet, consectetur adipiscing elit. This section displays AdSense ad slots.</p>
                 {/* First Placement */}
-                <ins className="adsbygoogle"
+                <ins className="adsbygoogle" 
                      style={{ display: 'block', border: '1px solid lightgray' }}
                      data-ad-client="ca-pub-1142382017286329"
                      data-ad-slot="9584138136"
