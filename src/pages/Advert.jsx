@@ -23,7 +23,7 @@ function Advertising() {
             adContainer.innerHTML = '';
             const script = document.createElement('script');
             script.type = 'text/javascript';
-            script.src = `https://secure.adnxs.com/ttj?id=35407013&size=${adSize}`;
+            script.src = `https://secure.adnxs.com/tt?id=35407013&size=${adSize}`;
             script.onerror = () => console.error(`Failed to load ad script for id '${id}'.`);
             adContainer.appendChild(script);
         };
@@ -35,7 +35,7 @@ function Advertising() {
     const createIframeContent = (size) => {
         return {
             __html: `
-                <script type="text/javascript" src="https://secure.adnxs.com/ttj?id=35405406&size=${size}"></script>
+                <script type="text/javascript" src="https://secure.adnxs.com/tt?id=35405406&size=${size}"></script>
             `,
         };
     };
@@ -68,14 +68,30 @@ function Advertising() {
                 <option value="728x90">728x90</option>
                 <option value="160x600">160x600</option>
                 <option value="320x50">320x50</option>
+                <option value="300x720">300x720</option>
             </select>
 
+            <label htmlFor="custom-ad-size"><br />Or enter custom Ad Size: </label>
+            <input
+                id="custom-ad-size"
+                type="text"
+                value={adSize}
+                onChange={(e) => setAdSize(e.target.value)}
+                placeholder="e.g., 300x720"
+            />
+
             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                <div id="ad1" style={{ border: '1px solid lightgray', width: adSize.split('x')[0] + 'px', height: adSize.split('x')[1] + 'px' }}>
-                    {/* Ad Placement 1 */}
+                <div>
+                    <p>TT Call</p>
+                    <div id="ad1" style={{ border: '1px solid lightgray', width: adSize.split('x')[0] + 'px', height: adSize.split('x')[1] + 'px' }}>
+                        {/* Ad Placement 1 */}
+                    </div>
                 </div>
-                <div id="ad2" style={{ border: '1px solid lightgray', width: adSize.split('x')[0] + 'px', height: adSize.split('x')[1] + 'px' }}>
-                    {/* Ad Placement 2 */}
+                <div>
+                    <p>TTJ Call</p>
+                    <div id="ad2" style={{ border: '1px solid lightgray', width: adSize.split('x')[0] + 'px', height: adSize.split('x')[1] + 'px' }}>
+                        {/* Ad Placement 2 */}
+                    </div>
                 </div>
             </div>
 
@@ -86,25 +102,41 @@ function Advertising() {
                 <option value="728x90">728x90</option>
                 <option value="160x600">160x600</option>
                 <option value="320x50">320x50</option>
+                <option value="300x720">300x720</option>
             </select>
 
+            <label htmlFor="custom-iframe-ad-size"><br />Or enter custom Ad Size: </label>
+            <input
+                id="custom-iframe-ad-size"
+                type="text"
+                value={iframeAdSize}
+                onChange={(e) => setIframeAdSize(e.target.value)}
+                placeholder="e.g., 300x720"
+            />
+
             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                <div
-                    dangerouslySetInnerHTML={createIframeContent(iframeAdSize)}
-                    style={{
-                        border: '1px solid lightgray',
-                        width: iframeAdSize.split('x')[0] + 'px',
-                        height: iframeAdSize.split('x')[1] + 'px',
-                    }}
-                ></div>
-                <div
-                    dangerouslySetInnerHTML={createIframeContent(iframeAdSize)}
-                    style={{
-                        border: '1px solid lightgray',
-                        width: iframeAdSize.split('x')[0] + 'px',
-                        height: iframeAdSize.split('x')[1] + 'px',
-                    }}
-                ></div>
+                <div>
+                    <p>TT Call</p>
+                    <div
+                        dangerouslySetInnerHTML={createIframeContent(iframeAdSize)}
+                        style={{
+                            border: '1px solid lightgray',
+                            width: iframeAdSize.split('x')[0] + 'px',
+                            height: iframeAdSize.split('x')[1] + 'px',
+                        }}
+                    ></div>
+                </div>
+                <div>
+                    <p>TTJ Call</p>
+                    <div
+                        dangerouslySetInnerHTML={createIframeContent(iframeAdSize)}
+                        style={{
+                            border: '1px solid lightgray',
+                            width: iframeAdSize.split('x')[0] + 'px',
+                            height: iframeAdSize.split('x')[1] + 'px',
+                        }}
+                    ></div>
+                </div>
             </div>
 
             <h2>AdSense</h2>
